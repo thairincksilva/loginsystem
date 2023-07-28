@@ -1,0 +1,1 @@
+Esse projeto se trata de um sistema de login feito com PHP e conexão ao banco de dados MySQL.

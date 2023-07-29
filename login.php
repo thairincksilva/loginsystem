@@ -27,23 +27,22 @@ $sql = "SELECT * FROM users
 da tabela "users" nas colunas "user" e "password"
 ou seja, está selecionando o usuário e senha que forem iguais aos valores das variáveis $user e $password
 */
-$res = $conn->query($sql) or die($conn->error); /* declaração da variável $res que executa  
+$res = $conn->query($sql) or die($conn->error); /* declaração da variável $res que recebe a conexão  
 a variável $conn executa a conexão que será criado posteriormente e a query que foi criada logo acima
 or die serve para exibir um erro caso a conexão não seja feita.
 */
-/* $conn é uma variável criada e atribuindo a class feita pra conexão*/
+/* $conn é uma variável que recebe a class feita pra conexão*/
 
+$row = $res->fetch_object(); // transforma a variárel $res em um array de objetos para poder chamar individualmente caso precise.
+$qtd = $res->num_rows;    //$qtd é a quantidade do resultado que foi encontrado -- executa um número de linhas
 
-$row = $res->fetch_object();
-$qtd = $res->num_rows;
-
-if ($qtd > 0) {
-
-    $_SESSION["user"] = $user;
+if ($qtd > 0) { // if para concluir a sessão e redirecionar para a dashboard
+/* se $qtd for maior que 0, então ele encontrou o resultado */
+    $_SESSION["user"] = $user; // agora vai atribuir usuário, nome e tipo de conta
     $_SESSION["name"] = $row->name;
     $_SESSION["type"] = $row->type;
-    print "<script>location.href='dashboard.php';</script>";
-} else {
+    print "<script>location.href='dashboard.php';</script>"; //redireciona para dashboard
+} else { // se nao passar vai redirecionar para index.php e exibir erro na tela.
     print "<script>window.alert('Usuário ou senha incorretos.');</script>";
     print "<script>location.href='index.php';</script>";
 }

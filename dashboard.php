@@ -20,9 +20,9 @@ if (empty($_SESSION)) {
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand">Sistema X</a>
-            <<?php 
-                echo "Olá, $_SESSION["name"]";
-                print "<a href= 'logout.php' class='btn btn-danger'>SAIR</a>"
+            <?php 
+                print "Olá, " . $_SESSION["nome"];
+                print "<a href= 'logout.php' class='btn btn-danger'>SAIR</a>";
             ?>
         </div>
     </nav>

@@ -23,13 +23,13 @@
                                 <div>
                                     <mb-3>
                                         <label for="">Usuário</label>
-                                        <input type="text" name="user" class="form-control">
+                                        <input type="text" name="usuario" class="form-control">
                                     </mb-3>
                                 </div>
                                 <div>
                                     <mb-3>
                                         <label for="">Senha</label>
-                                        <input type="password" name="password" class="form-control">
+                                        <input type="password" name="senha" class="form-control">
                                     </mb-3>
                                 </div>
                                 <div>

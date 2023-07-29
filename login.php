@@ -37,7 +37,7 @@ $row = $res->fetch_object(); // transforma a variárel $res em um array de objet
 $qtd = $res->num_rows;    //$qtd é a quantidade do resultado que foi encontrado -- executa um número de linhas
 
 if ($qtd > 0) { // if para concluir a sessão e redirecionar para a dashboard
-/* se $qtd for maior que 0, então ele encontrou o resultado */
+    /* se $qtd for maior que 0, então ele encontrou o resultado */
     $_SESSION["user"] = $user; // agora vai atribuir usuário, nome e tipo de conta
     $_SESSION["name"] = $row->name;
     $_SESSION["type"] = $row->type;

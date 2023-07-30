@@ -46,3 +46,4 @@ if ($qtd > 0) { // if para concluir a sessão e redirecionar para a dashboard
     print "<script>window.alert('Usuário ou senha incorretos.');</script>";
     print "<script>location.href='index.php';</script>";
 }
+
